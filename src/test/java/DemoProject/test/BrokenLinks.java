@@ -3,8 +3,8 @@ package DemoProject.test;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,7 +24,7 @@ public class BrokenLinks {
 		driver.manage().window().maximize();
 		
 		//wait 10 second
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		//open url
 		driver.get("http://www.deadlinkcity.com");
